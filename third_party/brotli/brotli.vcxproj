@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <ProjectGuid>{5A4573BF-4356-4A1B-A09D-DEBC44343384}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>brotli</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <TargetName>brotlid</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <TargetName>brotli</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;BROTLI_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\brunsli-master\third_party\brotli\c\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;BROTLI_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;BROTLI_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;BROTLI_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\brunsli-master\third_party\brotli\c\include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\brunsli-master\third_party\brotli\c\common\dictionary.h" />
+    <ClInclude Include="..\..\..\brunsli-master\third_party\brotli\c\common\transform.h" />
+    <ClInclude Include="..\..\..\brunsli-master\third_party\brotli\c\dec\bit_reader.h" />
+    <ClInclude Include="..\..\..\brunsli-master\third_party\brotli\c\dec\huffman.h" />
+    <ClInclude Include="..\..\..\brunsli-master\third_party\brotli\c\dec\prefix.h" />
+    <ClInclude Include="..\..\..\brunsli-master\third_party\brotli\c\dec\state.h" />
+    <ClInclude Include="..\..\..\brunsli-master\third_party\brotli\c\enc\backward_references.h" />
+    <ClInclude Include="..\..\..\brunsli-master\third_party\brotli\c\enc\backward_references_hq.h" />
+    <ClInclude Include="..\..\..\brunsli-master\third_party\brotli\c\enc\bit_cost.h" />
+    <ClInclude Include="..\..\..\brunsli-master\third_party\brotli\c\enc\block_splitter.h" />
+    <ClInclude Include="..\..\..\brunsli-master\third_party\brotli\c\enc\block_splitter_inc.h" />
+    <ClInclude Include="..\..\..\brunsli-master\third_party\brotli\c\enc\brotli_bit_stream.h" />
+    <ClInclude Include="..\..\..\brunsli-master\third_party\brotli\c\enc\cluster.h" />
+    <ClInclude Include="..\..\..\brunsli-master\third_party\brotli\c\enc\compress_fragment.h" />
+    <ClInclude Include="..\..\..\brunsli-master\third_party\brotli\c\enc\compress_fragment_two_pass.h" />
+    <ClInclude Include="..\..\..\brunsli-master\third_party\brotli\c\enc\dictionary_hash.h" />
+    <ClInclude Include="..\..\..\brunsli-master\third_party\brotli\c\enc\encoder_dict.h" />
+    <ClInclude Include="..\..\..\brunsli-master\third_party\brotli\c\enc\entropy_encode.h" />
+    <ClInclude Include="..\..\..\brunsli-master\third_party\brotli\c\enc\entropy_encode_static.h" />
+    <ClInclude Include="..\..\..\brunsli-master\third_party\brotli\c\enc\histogram.h" />
+    <ClInclude Include="..\..\..\brunsli-master\third_party\brotli\c\enc\histogram_inc.h" />
+    <ClInclude Include="..\..\..\brunsli-master\third_party\brotli\c\enc\literal_cost.h" />
+    <ClInclude Include="..\..\..\brunsli-master\third_party\brotli\c\enc\memory.h" />
+    <ClInclude Include="..\..\..\brunsli-master\third_party\brotli\c\enc\metablock.h" />
+    <ClInclude Include="..\..\..\brunsli-master\third_party\brotli\c\enc\static_dict.h" />
+    <ClInclude Include="..\..\..\brunsli-master\third_party\brotli\c\enc\utf8_util.h" />
+    <ClInclude Include="..\..\..\brunsli-master\third_party\brotli\c\include\brotli\encode.h" />
+    <ClInclude Include="framework.h" />
+    <ClInclude Include="pch.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\brunsli-master\third_party\brotli\c\common\dictionary.c" />
+    <ClCompile Include="..\..\..\brunsli-master\third_party\brotli\c\common\transform.c" />
+    <ClCompile Include="..\..\..\brunsli-master\third_party\brotli\c\dec\bit_reader.c" />
+    <ClCompile Include="..\..\..\brunsli-master\third_party\brotli\c\dec\decode.c" />
+    <ClCompile Include="..\..\..\brunsli-master\third_party\brotli\c\dec\huffman.c" />
+    <ClCompile Include="..\..\..\brunsli-master\third_party\brotli\c\dec\state.c" />
+    <ClCompile Include="..\..\..\brunsli-master\third_party\brotli\c\enc\backward_references.c" />
+    <ClCompile Include="..\..\..\brunsli-master\third_party\brotli\c\enc\backward_references_hq.c" />
+    <ClCompile Include="..\..\..\brunsli-master\third_party\brotli\c\enc\bit_cost.c" />
+    <ClCompile Include="..\..\..\brunsli-master\third_party\brotli\c\enc\block_splitter.c" />
+    <ClCompile Include="..\..\..\brunsli-master\third_party\brotli\c\enc\brotli_bit_stream.c" />
+    <ClCompile Include="..\..\..\brunsli-master\third_party\brotli\c\enc\cluster.c" />
+    <ClCompile Include="..\..\..\brunsli-master\third_party\brotli\c\enc\compress_fragment.c" />
+    <ClCompile Include="..\..\..\brunsli-master\third_party\brotli\c\enc\compress_fragment_two_pass.c" />
+    <ClCompile Include="..\..\..\brunsli-master\third_party\brotli\c\enc\dictionary_hash.c" />
+    <ClCompile Include="..\..\..\brunsli-master\third_party\brotli\c\enc\encode.c" />
+    <ClCompile Include="..\..\..\brunsli-master\third_party\brotli\c\enc\encoder_dict.c" />
+    <ClCompile Include="..\..\..\brunsli-master\third_party\brotli\c\enc\entropy_encode.c" />
+    <ClCompile Include="..\..\..\brunsli-master\third_party\brotli\c\enc\histogram.c" />
+    <ClCompile Include="..\..\..\brunsli-master\third_party\brotli\c\enc\literal_cost.c" />
+    <ClCompile Include="..\..\..\brunsli-master\third_party\brotli\c\enc\memory.c" />
+    <ClCompile Include="..\..\..\brunsli-master\third_party\brotli\c\enc\metablock.c" />
+    <ClCompile Include="..\..\..\brunsli-master\third_party\brotli\c\enc\static_dict.c" />
+    <ClCompile Include="..\..\..\brunsli-master\third_party\brotli\c\enc\utf8_util.c" />
+    <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="pch.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\enc">
+      <UniqueIdentifier>{a69773db-8a80-4811-9c36-8bedeab4623f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\enc">
+      <UniqueIdentifier>{45e97335-1bee-41ab-93ee-60e4ad787cff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\include">
+      <UniqueIdentifier>{a8edfedc-2100-4d21-ac9f-cc7a787991d4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\common">
+      <UniqueIdentifier>{49fea51b-f4df-4854-a2a8-74e079bd90fd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\common">
+      <UniqueIdentifier>{c93aace8-0436-4d04-bc00-a1e954995641}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\dec">
+      <UniqueIdentifier>{9f6eb7b1-fed6-4429-8113-26697337defd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\dec">
+      <UniqueIdentifier>{fe9bc8d7-8f7a-4f98-8270-680d0b141ce6}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="framework.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="pch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\brunsli-master\third_party\brotli\c\include\brotli\encode.h">
+      <Filter>Header Files\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\brunsli-master\third_party\brotli\c\enc\encoder_dict.h">
+      <Filter>Header Files\enc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\brunsli-master\third_party\brotli\c\enc\memory.h">
+      <Filter>Header Files\enc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\brunsli-master\third_party\brotli\c\enc\backward_references.h">
+      <Filter>Header Files\enc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\brunsli-master\third_party\brotli\c\enc\backward_references_hq.h">
+      <Filter>Header Files\enc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\brunsli-master\third_party\brotli\c\enc\static_dict.h">
+      <Filter>Header Files\enc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\brunsli-master\third_party\brotli\c\enc\literal_cost.h">
+      <Filter>Header Files\enc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\brunsli-master\third_party\brotli\c\enc\block_splitter.h">
+      <Filter>Header Files\enc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\brunsli-master\third_party\brotli\c\enc\bit_cost.h">
+      <Filter>Header Files\enc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\brunsli-master\third_party\brotli\c\enc\block_splitter_inc.h">
+      <Filter>Header Files\enc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\brunsli-master\third_party\brotli\c\enc\cluster.h">
+      <Filter>Header Files\enc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\brunsli-master\third_party\brotli\c\enc\utf8_util.h">
+      <Filter>Header Files\enc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\brunsli-master\third_party\brotli\c\common\dictionary.h">
+      <Filter>Header Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\brunsli-master\third_party\brotli\c\enc\metablock.h">
+      <Filter>Header Files\enc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\brunsli-master\third_party\brotli\c\enc\histogram.h">
+      <Filter>Header Files\enc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\brunsli-master\third_party\brotli\c\enc\histogram_inc.h">
+      <Filter>Header Files\enc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\brunsli-master\third_party\brotli\c\enc\entropy_encode.h">
+      <Filter>Header Files\enc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\brunsli-master\third_party\brotli\c\enc\entropy_encode_static.h">
+      <Filter>Header Files\enc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\brunsli-master\third_party\brotli\c\common\transform.h">
+      <Filter>Header Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\brunsli-master\third_party\brotli\c\enc\dictionary_hash.h">
+      <Filter>Header Files\enc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\brunsli-master\third_party\brotli\c\enc\brotli_bit_stream.h">
+      <Filter>Header Files\enc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\brunsli-master\third_party\brotli\c\enc\compress_fragment.h">
+      <Filter>Header Files\enc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\brunsli-master\third_party\brotli\c\enc\compress_fragment_two_pass.h">
+      <Filter>Header Files\enc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\brunsli-master\third_party\brotli\c\dec\bit_reader.h">
+      <Filter>Header Files\dec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\brunsli-master\third_party\brotli\c\dec\huffman.h">
+      <Filter>Header Files\dec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\brunsli-master\third_party\brotli\c\dec\prefix.h">
+      <Filter>Header Files\dec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\brunsli-master\third_party\brotli\c\dec\state.h">
+      <Filter>Header Files\dec</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="dllmain.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pch.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\brunsli-master\third_party\brotli\c\enc\encode.c">
+      <Filter>Source Files\enc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\brunsli-master\third_party\brotli\c\enc\encoder_dict.c">
+      <Filter>Source Files\enc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\brunsli-master\third_party\brotli\c\enc\memory.c">
+      <Filter>Source Files\enc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\brunsli-master\third_party\brotli\c\enc\backward_references.c">
+      <Filter>Source Files\enc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\brunsli-master\third_party\brotli\c\enc\backward_references_hq.c">
+      <Filter>Source Files\enc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\brunsli-master\third_party\brotli\c\enc\static_dict.c">
+      <Filter>Source Files\enc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\brunsli-master\third_party\brotli\c\enc\literal_cost.c">
+      <Filter>Source Files\enc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\brunsli-master\third_party\brotli\c\enc\block_splitter.c">
+      <Filter>Source Files\enc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\brunsli-master\third_party\brotli\c\enc\bit_cost.c">
+      <Filter>Source Files\enc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\brunsli-master\third_party\brotli\c\enc\cluster.c">
+      <Filter>Source Files\enc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\brunsli-master\third_party\brotli\c\enc\utf8_util.c">
+      <Filter>Source Files\enc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\brunsli-master\third_party\brotli\c\common\dictionary.c">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\brunsli-master\third_party\brotli\c\enc\metablock.c">
+      <Filter>Source Files\enc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\brunsli-master\third_party\brotli\c\enc\histogram.c">
+      <Filter>Source Files\enc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\brunsli-master\third_party\brotli\c\enc\entropy_encode.c">
+      <Filter>Source Files\enc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\brunsli-master\third_party\brotli\c\common\transform.c">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\brunsli-master\third_party\brotli\c\enc\dictionary_hash.c">
+      <Filter>Source Files\enc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\brunsli-master\third_party\brotli\c\enc\brotli_bit_stream.c">
+      <Filter>Source Files\enc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\brunsli-master\third_party\brotli\c\enc\compress_fragment.c">
+      <Filter>Source Files\enc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\brunsli-master\third_party\brotli\c\enc\compress_fragment_two_pass.c">
+      <Filter>Source Files\enc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\brunsli-master\third_party\brotli\c\dec\bit_reader.c">
+      <Filter>Source Files\dec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\brunsli-master\third_party\brotli\c\dec\decode.c">
+      <Filter>Source Files\dec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\brunsli-master\third_party\brotli\c\dec\huffman.c">
+      <Filter>Source Files\dec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\brunsli-master\third_party\brotli\c\dec\state.c">
+      <Filter>Source Files\dec</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <ProjectGuid>{CAEBDA9F-0B9C-40C9-AFF0-01158B4A54A8}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>brunsli</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;BRUNSLI_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>$(ProjectDir)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;BRUNSLI_EXPORTS;_WINDOWS;_USRDLL;BRUNSLI_SHARED_COMPILATION;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\brunsli-master\c\include;$(ProjectDir)..\..\brunsli-master\third_party\googletest\googletest\include;$(ProjectDir)..\..\brunsli-master\third_party\brotli\c\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <AdditionalDependencies>brotlid.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(IntDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+    <PostBuildEvent>
+      <Command>create_lib_debug.bat</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;BRUNSLI_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;BRUNSLI_EXPORTS;_WINDOWS;_USRDLL;BRUNSLI_SHARED_COMPILATION;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\brunsli-master\c\include;$(ProjectDir)..\..\brunsli-master\third_party\googletest\googletest\include;$(ProjectDir)..\..\brunsli-master\third_party\brotli\c\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <AdditionalLibraryDirectories>$(IntDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>brotli.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>create_lib_release.bat</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\brunsli-master\c\common\ans_params.h" />
+    <ClInclude Include="..\..\brunsli-master\c\common\constants.h" />
+    <ClInclude Include="..\..\brunsli-master\c\common\context.h" />
+    <ClInclude Include="..\..\brunsli-master\c\common\distributions.h" />
+    <ClInclude Include="..\..\brunsli-master\c\common\histogram.h" />
+    <ClInclude Include="..\..\brunsli-master\c\common\huffman_tree.h" />
+    <ClInclude Include="..\..\brunsli-master\c\common\lehmer_code.h" />
+    <ClInclude Include="..\..\brunsli-master\c\common\platform.h" />
+    <ClInclude Include="..\..\brunsli-master\c\common\port.h" />
+    <ClInclude Include="..\..\brunsli-master\c\common\predict.h" />
+    <ClInclude Include="..\..\brunsli-master\c\common\quant_matrix.h" />
+    <ClInclude Include="..\..\brunsli-master\c\dec\ans_decode.h" />
+    <ClInclude Include="..\..\brunsli-master\c\dec\arith_decode.h" />
+    <ClInclude Include="..\..\brunsli-master\c\dec\bit_reader.h" />
+    <ClInclude Include="..\..\brunsli-master\c\dec\brunsli_input.h" />
+    <ClInclude Include="..\..\brunsli-master\c\dec\context_map_decode.h" />
+    <ClInclude Include="..\..\brunsli-master\c\dec\histogram_decode.h" />
+    <ClInclude Include="..\..\brunsli-master\c\dec\huffman_table.h" />
+    <ClInclude Include="..\..\brunsli-master\c\dec\jpeg_bit_writer.h" />
+    <ClInclude Include="..\..\brunsli-master\c\dec\state.h" />
+    <ClInclude Include="..\..\brunsli-master\c\dec\state_internal.h" />
+    <ClInclude Include="..\..\brunsli-master\c\enc\ans_encode.h" />
+    <ClInclude Include="..\..\brunsli-master\c\enc\context_map_encode.h" />
+    <ClInclude Include="..\..\brunsli-master\c\enc\histogram_encode.h" />
+    <ClInclude Include="..\..\brunsli-master\c\enc\jpeg_huffman_decode.h" />
+    <ClInclude Include="..\..\brunsli-master\c\enc\write_bits.h" />
+    <ClInclude Include="framework.h" />
+    <ClInclude Include="include\brunsli\jpeg_data_reader.h" />
+    <ClInclude Include="pch.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\brunsli-master\c\common\constants.cc" />
+    <ClCompile Include="..\..\brunsli-master\c\common\context.cc" />
+    <ClCompile Include="..\..\brunsli-master\c\common\huffman_tree.cc" />
+    <ClCompile Include="..\..\brunsli-master\c\common\lehmer_code.cc" />
+    <ClCompile Include="..\..\brunsli-master\c\common\platform.cc" />
+    <ClCompile Include="..\..\brunsli-master\c\common\predict.cc" />
+    <ClCompile Include="..\..\brunsli-master\c\common\quant_matrix.cc" />
+    <ClCompile Include="..\..\brunsli-master\c\dec\ans_decode.cc" />
+    <ClCompile Include="..\..\brunsli-master\c\dec\brunsli_decode.cc" />
+    <ClCompile Include="..\..\brunsli-master\c\dec\context_map_decode.cc" />
+    <ClCompile Include="..\..\brunsli-master\c\dec\decode.cc" />
+    <ClCompile Include="..\..\brunsli-master\c\dec\histogram_decode.cc" />
+    <ClCompile Include="..\..\brunsli-master\c\dec\huffman_decode.cc" />
+    <ClCompile Include="..\..\brunsli-master\c\dec\huffman_table.cc" />
+    <ClCompile Include="..\..\brunsli-master\c\dec\jpeg_data_writer.cc" />
+    <ClCompile Include="..\..\brunsli-master\c\dec\state.cc" />
+    <ClCompile Include="..\..\brunsli-master\c\enc\ans_encode.cc" />
+    <ClCompile Include="..\..\brunsli-master\c\enc\brunsli_encode.cc" />
+    <ClCompile Include="..\..\brunsli-master\c\enc\context_map_encode.cc" />
+    <ClCompile Include="..\..\brunsli-master\c\enc\encode.cc" />
+    <ClCompile Include="..\..\brunsli-master\c\enc\histogram_encode.cc" />
+    <ClCompile Include="..\..\brunsli-master\c\enc\jpeg_data_reader.cc" />
+    <ClCompile Include="..\..\brunsli-master\c\enc\jpeg_huffman_decode.cc" />
+    <ClCompile Include="..\..\brunsli-master\c\enc\write_bits.cc" />
+    <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="pch.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

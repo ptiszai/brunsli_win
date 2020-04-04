@@ -33,9 +33,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="brunsli_net_wrapper, Version=1.0.7394.32225, Culture=neutral, processorArchitecture=AMD64">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\brunsli_net_wrapper\x64\Release\brunsli_net_wrapper.dll</HintPath>
+    <Reference Include="brunsli_net_wrapper">
+      <HintPath>..\..\..\..\..\brunsli\dotNet\brunsli_net_wrapper\x64\Release\brunsli_net_wrapper.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

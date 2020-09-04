@@ -34,7 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="brunsli_net_wrapper">
-      <HintPath>..\brunsli_net_wrapper\x64\Release\brunsli_net_wrapper.dll</HintPath>
+      <HintPath>..\brunsli_net_wrapper\x64\Debug\brunsli_net_wrapper.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

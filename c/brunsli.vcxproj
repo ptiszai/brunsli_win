@@ -145,7 +145,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>NDEBUG;BRUNSLI_EXPORTS;_WINDOWS;_USRDLL;BRUNSLI_SHARED_COMPILATION;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>NDEBUG;BRUNSLI_EXPORTS;_WINDOWS;_USRDLL;BRUNSLI_SHARED_COMPILATION;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <AdditionalIncludeDirectories>$(ProjectDir)..\..\brunsli-master\c\include;$(ProjectDir)..\..\brunsli-master\third_party\googletest\googletest\include;$(ProjectDir)..\..\brunsli-master\third_party\brotli\c\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
@@ -169,7 +169,6 @@
     <ClInclude Include="..\..\brunsli-master\c\common\context.h" />
     <ClInclude Include="..\..\brunsli-master\c\common\distributions.h" />
     <ClInclude Include="..\..\brunsli-master\c\common\histogram.h" />
-    <ClInclude Include="..\..\brunsli-master\c\common\huffman_tree.h" />
     <ClInclude Include="..\..\brunsli-master\c\common\lehmer_code.h" />
     <ClInclude Include="..\..\brunsli-master\c\common\platform.h" />
     <ClInclude Include="..\..\brunsli-master\c\common\port.h" />
@@ -182,27 +181,39 @@
     <ClInclude Include="..\..\brunsli-master\c\dec\context_map_decode.h" />
     <ClInclude Include="..\..\brunsli-master\c\dec\histogram_decode.h" />
     <ClInclude Include="..\..\brunsli-master\c\dec\huffman_table.h" />
-    <ClInclude Include="..\..\brunsli-master\c\dec\jpeg_bit_writer.h" />
+    <ClInclude Include="..\..\brunsli-master\c\dec\serialization_state.h" />
     <ClInclude Include="..\..\brunsli-master\c\dec\state.h" />
     <ClInclude Include="..\..\brunsli-master\c\dec\state_internal.h" />
     <ClInclude Include="..\..\brunsli-master\c\enc\ans_encode.h" />
     <ClInclude Include="..\..\brunsli-master\c\enc\context_map_encode.h" />
     <ClInclude Include="..\..\brunsli-master\c\enc\histogram_encode.h" />
+    <ClInclude Include="..\..\brunsli-master\c\enc\huffman_encode.h" />
+    <ClInclude Include="..\..\brunsli-master\c\enc\huffman_tree.h" />
     <ClInclude Include="..\..\brunsli-master\c\enc\jpeg_huffman_decode.h" />
     <ClInclude Include="..\..\brunsli-master\c\enc\write_bits.h" />
+    <ClInclude Include="..\..\brunsli-master\c\include\brunsli\brunsli_decode.h" />
+    <ClInclude Include="..\..\brunsli-master\c\include\brunsli\brunsli_encode.h" />
+    <ClInclude Include="..\..\brunsli-master\c\include\brunsli\decode.h" />
+    <ClInclude Include="..\..\brunsli-master\c\include\brunsli\encode.h" />
+    <ClInclude Include="..\..\brunsli-master\c\include\brunsli\jpeg_data.h" />
+    <ClInclude Include="..\..\brunsli-master\c\include\brunsli\jpeg_data_reader.h" />
+    <ClInclude Include="..\..\brunsli-master\c\include\brunsli\jpeg_data_writer.h" />
+    <ClInclude Include="..\..\brunsli-master\c\include\brunsli\status.h" />
+    <ClInclude Include="..\..\brunsli-master\c\include\brunsli\types.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="include\brunsli\jpeg_data_reader.h" />
     <ClInclude Include="pch.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\brunsli-master\c\common\ans_params.cc" />
     <ClCompile Include="..\..\brunsli-master\c\common\constants.cc" />
     <ClCompile Include="..\..\brunsli-master\c\common\context.cc" />
-    <ClCompile Include="..\..\brunsli-master\c\common\huffman_tree.cc" />
     <ClCompile Include="..\..\brunsli-master\c\common\lehmer_code.cc" />
     <ClCompile Include="..\..\brunsli-master\c\common\platform.cc" />
     <ClCompile Include="..\..\brunsli-master\c\common\predict.cc" />
     <ClCompile Include="..\..\brunsli-master\c\common\quant_matrix.cc" />
     <ClCompile Include="..\..\brunsli-master\c\dec\ans_decode.cc" />
+    <ClCompile Include="..\..\brunsli-master\c\dec\bit_reader.cc" />
     <ClCompile Include="..\..\brunsli-master\c\dec\brunsli_decode.cc" />
     <ClCompile Include="..\..\brunsli-master\c\dec\context_map_decode.cc" />
     <ClCompile Include="..\..\brunsli-master\c\dec\decode.cc" />
@@ -216,6 +227,8 @@
     <ClCompile Include="..\..\brunsli-master\c\enc\context_map_encode.cc" />
     <ClCompile Include="..\..\brunsli-master\c\enc\encode.cc" />
     <ClCompile Include="..\..\brunsli-master\c\enc\histogram_encode.cc" />
+    <ClCompile Include="..\..\brunsli-master\c\enc\huffman_encode.cc" />
+    <ClCompile Include="..\..\brunsli-master\c\enc\huffman_tree.cc" />
     <ClCompile Include="..\..\brunsli-master\c\enc\jpeg_data_reader.cc" />
     <ClCompile Include="..\..\brunsli-master\c\enc\jpeg_huffman_decode.cc" />
     <ClCompile Include="..\..\brunsli-master\c\enc\write_bits.cc" />

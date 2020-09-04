@@ -6,16 +6,27 @@
 
 #include "pch.h"
 #include <msclr\marshal_cppstd.h>
-#include "brunsli_net_wrapper.h"
+
+/*#include <brunsli/status.h>
+#include <brunsli/types.h>
 #include <brunsli/brunsli_decode.h>
 #include <brunsli/jpeg_data_writer.h>
+#include <brunsli/brunsli_encode.h>*/
+#include "brunsli_net_wrapper.h"
+#include "brunsli_mydecode.h"
+class BrunsliDecoder;
+#include <brunsli/jpeg_data.h>
+#include <brunsli/status.h>
+#include <brunsli/types.h>
+//#include <brunsli/brunsli_decode.h>
 #include <brunsli/brunsli_encode.h>
+#include <brunsli/jpeg_data_writer.h>
 
 using namespace System;
 using namespace System::Runtime::InteropServices;
 using namespace msclr::interop;
 
-int StringWriter(void* data, const uint8_t* buf, size_t count) {
+size_t StringWriter(void* data, const uint8_t* buf, size_t count) {
   std::string* _output = reinterpret_cast<std::string*>(data);
   _output->append(reinterpret_cast<const char*>(buf), count);
   return count;
@@ -70,6 +81,7 @@ array<Byte>^ BrunsliWrapper::EncodeJpeg(array<Byte>^ indata) {
         return nullptr;
      }
     std::string _output;
+   // size_t output_size = brunsli::GetMaximumBrunsliEncodedSize(jpg);
     size_t _output_size = brunsli::GetMaximumBrunsliEncodedSize(_jpg);
     _output.resize(_output_size);
      uint8_t* _output_data = reinterpret_cast<uint8_t*>(&_output[0]);   
@@ -81,5 +93,3 @@ array<Byte>^ BrunsliWrapper::EncodeJpeg(array<Byte>^ indata) {
      return ToByteArray(_output);
 }
 }
-
-

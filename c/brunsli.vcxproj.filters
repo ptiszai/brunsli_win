@@ -51,9 +51,6 @@
     <ClInclude Include="..\..\brunsli-master\c\common\constants.h">
       <Filter>Header Files\common</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\brunsli-master\include\brunsli\jpeg_data_reader.h">
-      <Filter>Header Files\include\brunsli</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\brunsli-master\c\enc\jpeg_huffman_decode.h">
       <Filter>Header Files\enc</Filter>
     </ClInclude>
@@ -90,9 +87,6 @@
     <ClInclude Include="..\..\brunsli-master\c\common\lehmer_code.h">
       <Filter>Header Files\common</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\brunsli-master\c\common\huffman_tree.h">
-      <Filter>Header Files\common</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\brunsli-master\c\dec\ans_decode.h">
       <Filter>Header Files\dec</Filter>
     </ClInclude>
@@ -114,9 +108,6 @@
     <ClInclude Include="..\..\brunsli-master\c\dec\huffman_table.h">
       <Filter>Header Files\dec</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\brunsli-master\c\dec\jpeg_bit_writer.h">
-      <Filter>Header Files\dec</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\brunsli-master\c\dec\state.h">
       <Filter>Header Files\dec</Filter>
     </ClInclude>
@@ -129,7 +120,45 @@
     <ClInclude Include="..\..\brunsli-master\c\common\histogram.h">
       <Filter>Header Files\common</Filter>
     </ClInclude>
-
+    <ClInclude Include="include\brunsli\jpeg_data_reader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\brunsli-master\c\dec\serialization_state.h">
+      <Filter>Header Files\dec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\brunsli-master\c\enc\huffman_encode.h">
+      <Filter>Header Files\enc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\brunsli-master\c\enc\huffman_tree.h">
+      <Filter>Header Files\enc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\brunsli-master\c\include\brunsli\brunsli_decode.h">
+      <Filter>Header Files\include\brunsli</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\brunsli-master\c\include\brunsli\brunsli_encode.h">
+      <Filter>Header Files\include\brunsli</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\brunsli-master\c\include\brunsli\decode.h">
+      <Filter>Header Files\include\brunsli</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\brunsli-master\c\include\brunsli\encode.h">
+      <Filter>Header Files\include\brunsli</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\brunsli-master\c\include\brunsli\jpeg_data.h">
+      <Filter>Header Files\include\brunsli</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\brunsli-master\c\include\brunsli\jpeg_data_reader.h">
+      <Filter>Header Files\include\brunsli</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\brunsli-master\c\include\brunsli\jpeg_data_writer.h">
+      <Filter>Header Files\include\brunsli</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\brunsli-master\c\include\brunsli\status.h">
+      <Filter>Header Files\include\brunsli</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\brunsli-master\c\include\brunsli\types.h">
+      <Filter>Header Files\include\brunsli</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp">
@@ -180,9 +209,6 @@
     <ClCompile Include="..\..\brunsli-master\c\common\lehmer_code.cc">
       <Filter>Source Files\common</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\brunsli-master\c\common\huffman_tree.cc">
-      <Filter>Source Files\common</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\brunsli-master\c\dec\jpeg_data_writer.cc">
       <Filter>Source Files\dec</Filter>
     </ClCompile>
@@ -209,6 +235,18 @@
     </ClCompile>
     <ClCompile Include="..\..\brunsli-master\c\dec\context_map_decode.cc">
       <Filter>Source Files\dec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\brunsli-master\c\common\ans_params.cc">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\brunsli-master\c\dec\bit_reader.cc">
+      <Filter>Source Files\dec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\brunsli-master\c\enc\huffman_encode.cc">
+      <Filter>Source Files\enc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\brunsli-master\c\enc\huffman_tree.cc">
+      <Filter>Source Files\enc</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
